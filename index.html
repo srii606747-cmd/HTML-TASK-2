@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Web Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌐 My Advanced Web Project</h1>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+    <nav>
+      <ul>
+        <li><a href="#form">Contact</a></li>
+        <li><a href="#todo">To-Do</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Form -->
+  <section id="form" class="card">
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" id="email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone:</label>
+          <input type="tel" id="phone" placeholder="1234567890" required>
+        </div>
+        <div class="form-group">
+          <label>Subject:</label>
+          <select id="subject" required>
+            <option value="">--Select--</option>
+            <option value="feedback">Feedback</option>
+            <option value="support">Support</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <label>Preferred Contact:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="contact" value="Email" required> Email</label>
+        <label><input type="radio" name="contact" value="Phone"> Phone</label>
+      </div>
+
+      <label>Message:</label>
+      <textarea id="message" required></textarea>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" id="terms" required>
+          I agree to the terms & conditions
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- To-Do List -->
+  <section id="todo" class="card">
+    <h2>Dynamic To-Do List</h2>
+    <div class="todo-controls">
+      <input type="text" id="taskInput" placeholder="Add new task">
+      <button id="addTask">Add Task</button>
+    </div>
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="completed">Completed</button>
+    </div>
+    <ul id="taskList"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Advanced Web Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
